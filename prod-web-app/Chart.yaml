@@ -1,0 +1,6 @@
+apiVersion: v2
+name: prod-web-app
+description: Sample production-oriented Helm chart for an HTTP application
+type: application
+version: 1.0.0
+appVersion: "1.29.0"
