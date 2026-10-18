@@ -29,7 +29,7 @@ jobs:
         run: helm template web-release ./prod-web-app --namespace production -f terraform/production.yaml
 
   deploy:
-    if: (github.event_name == 'workflow_dispatch' || github.event_name == 'push') && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'workflow_dispatch' || github.event_name == 'push') && github.ref == 'refs/heads/main' && vars.AWS_ROLE_ARN != '' && vars.AWS_REGION != '' && vars.EKS_CLUSTER_NAME != ''
     needs: validate
     runs-on: ubuntu-latest
     environment: production
