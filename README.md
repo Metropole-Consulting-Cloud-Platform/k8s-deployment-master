@@ -1,6 +1,6 @@
 # Kubernetes Deployment Master
 
-A sample repository showing two ways to deploy the same Helm chart to an
+The referenced repository showing two ways to deploy the same Helm chart to an
 Amazon EKS cluster:
 
 1. **Terraform** manages the Helm release as infrastructure.
